@@ -1,0 +1,38 @@
+{
+  "name": "ict202-user-query",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "start:dev": "nodemon src/index.js",
+    "test": "jest",
+    "test:coverage": "jest --coverage",
+    "db:up": "npx sequelize-cli db:migrate",
+    "db:down": "npx sequelize-cli db:migrate:undo:all",
+    "db:reset": "npm run db:down && npm run db:up"
+  },
+  "dependencies": {
+    "apollo-server": "^3.10.2",
+    "dotenv": "^16.0.2",
+    "graphql": "^16.6.0",
+    "lodash.merge": "^4.6.2",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.21.6"
+  },
+  "devDependencies": {
+    "jest": "^29.0.3",
+    "nodemon": "^2.0.19",
+    "sequelize-cli": "^6.4.1"
+  },
+  "jest": {
+    "rootDir": "./",
+    "testEnvironment": "node",
+    "coverageDirectory": "./",
+    "collectCoverageFrom": [
+      "src/**/*.(t|j)s"
+    ]
+  },
+  "author": "",
+  "license": "ISC"
+}

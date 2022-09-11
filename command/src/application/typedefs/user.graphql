@@ -1,0 +1,29 @@
+type User {
+    id: Int,
+    firstName: String
+    lastName: String
+    email: String!
+    password: String
+}
+
+input UserInput {
+    firstName: String
+    lastName: String
+    email: String!
+    password: String
+}
+
+extend type Mutation {
+    createUser(
+        input: UserInput
+    ): User
+
+    updateUser(
+        id: Int!
+        input: UserInput
+    ): User
+
+    removeUser(
+        id: Int!
+    ): Boolean
+}

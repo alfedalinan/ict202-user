@@ -1,0 +1,13 @@
+type User {
+    id: Int,
+    firstName: String
+    lastName: String
+    email: String!
+}
+
+extend type Query {
+    loginUser(
+        email: String!
+        password: String
+    ): User
+}
