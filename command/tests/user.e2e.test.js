@@ -7,7 +7,8 @@ describe('User E2E', () => {
             firstName: "Alfed",
             lastName: "A",
             email: "alfed.a@gmail.com",
-            password: "someKindOfPassword"
+            password: "someKindOfPassword",
+            role: 1
         }
 
         const result = await server.executeOperation({
@@ -17,12 +18,14 @@ describe('User E2E', () => {
                         firstName: "${input.firstName}",
                         lastName: "${input.lastName}",
                         email: "${input.email}",
-                        password: "${input.password}"
+                        password: "${input.password}",
+                        role: ${input.role}
                     }) {
                         id
                         firstName
                         lastName
                         email
+                        role
                     }
                 }
             `
@@ -43,7 +46,8 @@ describe('User E2E', () => {
             firstName: "Alfeds",
             lastName: "Al",
             email: "alfed.a@gmail.com",
-            password: "someKindOfPassword"
+            password: "someKindOfPassword",
+            role: 1
         }
 
         const result = await server.executeOperation({
@@ -56,12 +60,14 @@ describe('User E2E', () => {
                             lastName: "${input.lastName}",
                             email: "${input.lastName}",
                             password: "${input.password}"
+                            role: ${input.role}
                         }
                     ) {
                         id
                         firstName
                         lastName
                         email
+                        role
                     }
                 }
             `

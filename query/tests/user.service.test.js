@@ -14,6 +14,7 @@ describe('User', () => {
         expect(loginData.firstName).toBeTruthy()
         expect(loginData.lastName).toBeTruthy()
         expect(loginData.email).toBeTruthy()
+        expect(loginData.role).toBeTruthy()
     })
 
 })

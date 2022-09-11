@@ -9,7 +9,7 @@ async function login(email, password) {
         }
     })
     
-    return user.dataValues || null
+    return user ? user.dataValues :  null
 }
 
 module.exports = {

@@ -19,6 +19,7 @@ describe('User E2E', () => {
                         firstName
                         lastName
                         email
+                        role
                     }
                 }
             `

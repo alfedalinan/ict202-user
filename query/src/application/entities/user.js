@@ -25,6 +25,9 @@ module.exports = (sequelize) => {
         },
         password: {
             type: DataTypes.TEXT
+        },
+        role: {
+            type: DataTypes.INTEGER
         }
     })
 

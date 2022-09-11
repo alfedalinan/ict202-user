@@ -8,7 +8,8 @@ describe('User', () => {
             firstName: 'Alfed',
             lastName: 'A',
             email: 'alfed.a@email.com',
-            password: 'someKindOfMyPassword'
+            password: 'someKindOfMyPassword',
+            role: 1
         }
 
         const created = await create(data)
@@ -23,7 +24,8 @@ describe('User', () => {
             firstName: 'Alfeds',
             lastName: 'Al',
             email: 'alfed.a@email.com',
-            password: 'someKindOfMyPassword'
+            password: 'someKindOfMyPassword',
+            role: 1
         }
 
         const updated = await update(id, data)
